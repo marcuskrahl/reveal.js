@@ -7,7 +7,7 @@
     var date = (typeof fixedDate === "object" && fixedDate instanceof Date) ? fixedDate : new Date();
     var dateString = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
     dateString += ".";
-    dateString += date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth();
+    dateString += (date.getMonth() < 9 ? "0" : "") + (date.getMonth() + 1 );
     dateString += ".";
     dateString += date.getFullYear();
 
