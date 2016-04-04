@@ -39,10 +39,43 @@
     }
 
     var slides = document.querySelectorAll('.slides > section');
+    var footers = [];
 
     for(var slideNumber = 0; slideNumber < slides.length; slideNumber++) {
         var slide = slides[slideNumber];
-        slide.appendChild(createFooter(slideNumber+1)); 
+        var footer = createFooter(slideNumber+1);
+        footers.push(footer);
+        slide.appendChild(footer); 
     }
 
+    function getPresentationScale() {
+        var slidesElement = document.querySelector(".slides");
+        var scaleRegex = /scale\(([\d\.]+)\)/;
+        var scaleResult = scaleRegex.exec(slidesElement.style.transform);
+        return scaleResult === null ? 1.0 : Number.parseFloat(scaleResult[1]); 
+    }
+
+    function resizeSlides() {
+        var scale = getPresentationScale();
+        var windowWidth = window.innerWidth;
+        var targetWidth = windowWidth * (1/scale);
+        console.log(windowWidth+ " " +targetWidth);
+        footers.forEach(function(footer) {
+            footer.style.width = targetWidth + "px";
+            footer.style.marginLeft = (-0.5 * targetWidth) + "px";
+        });
+    }
+
+    function resizeSlidesAsync() {
+        window.setTimeout(resizeSlides,20);
+    }
+    
+
+    window.addEventListener('resize',resizeSlidesAsync);
+    document.addEventListener('webkitfullscreenchange', resizeSlidesAsync);
+    document.addEventListener('mozfullscreenchange', resizeSlidesAsync);
+    document.addEventListener('fullscreenchange ', resizeSlidesAsync);
+    document.addEventListener('MSFullscreenChange', resizeSlidesAsync);
+
+    resizeSlidesAsync();
 })()

@@ -307,3 +307,29 @@ body {
     height: 45.878296146px;
     background-image: url("/img/htw_logo.png");
     background-size: 100%; }
+
+/* Footer */
+.reveal .slides > section footer {
+  display: block;
+  position: fixed;
+  left: 50%;
+  bottom: 15px;
+  height: 30px;
+  overflow: hidden; }
+  .reveal .slides > section footer * {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 0.6em;
+    box-sizing: border-box; }
+  .reveal .slides > section footer .footer-name {
+    width: 16%; }
+  .reveal .slides > section footer .footer-title {
+    width: 60%; }
+  .reveal .slides > section footer .footer-slide-number {
+    width: 12%; }
+  .reveal .slides > section footer .footer-date {
+    width: 12%; }
+
+.reveal .slides > section section + footer {
+  bottom: -22px; }

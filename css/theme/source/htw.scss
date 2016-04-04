@@ -82,3 +82,43 @@ $logoOriginalHeight: 86px;
         }
     }
 }
+
+
+/* Footer */
+.reveal .slides>section {
+    footer {
+        display:block;
+        position: fixed;
+        left:50%;
+        bottom: 15px;
+        height:30px;
+        overflow: hidden;
+    
+        * {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 0.6em;
+            box-sizing: border-box;
+        }
+    
+        .footer-name {
+            width:16%;
+        }
+        
+        .footer-title {
+            width: 60%;
+        }
+    
+        .footer-slide-number {
+            width: 12%;
+        }
+        
+        .footer-date {
+            width: 12%;
+        }
+    }
+    section + footer {
+        bottom: -22px;
+    }
+}
