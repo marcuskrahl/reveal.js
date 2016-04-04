@@ -333,3 +333,6 @@ body {
 
 .reveal .slides > section section + footer {
   bottom: -22px; }
+
+.reveal .slides > section.title-slide footer {
+  display: none; }

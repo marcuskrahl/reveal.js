@@ -121,4 +121,11 @@ $logoOriginalHeight: 86px;
     section + footer {
         bottom: -22px;
     }
+    
+    //Hide footer on title slides
+    &.title-slide footer {
+        display:none;
+    }
+
+    
 }
