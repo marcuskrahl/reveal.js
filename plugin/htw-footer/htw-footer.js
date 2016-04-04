@@ -2,15 +2,24 @@
     "use strict";
 
     var slidePrefix = "Seite ";
-    var name = "Max Mustermann";
-    var title = "Eine Demopräsentation";
-    var date = (typeof fixedDate === "object" && fixedDate instanceof Date) ? fixedDate : new Date();
+    var name = getMetaTagValue("author");
+    var title = document.title; 
+    var date = (getMetaTagValue("date") !== "") ? new Date(getMetaTagValue("date")) : new Date();
     var dateString = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
     dateString += ".";
     dateString += (date.getMonth() < 9 ? "0" : "") + (date.getMonth() + 1 );
     dateString += ".";
     dateString += date.getFullYear();
 
+    function getMetaTagValue(tagName) {
+        var metaElements = document.getElementsByTagName("meta");
+        for (var i=0; i<metaElements.length; i++) {
+            if (metaElements[i].name == tagName) {
+                return metaElements[i].content;
+            }
+        }
+        return "";
+    }
 
     function createFooter(slideNumber) {
         var footerElement = document.createElement("footer");
