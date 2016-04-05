@@ -12,6 +12,14 @@ reveal.js comes with a broad range of features including [nested slides](https:/
 - [Browser Support](https://github.com/hakimel/reveal.js/wiki/Browser-Support): Explanation of browser support and fallbacks.
 - [Plugins](https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware): A list of plugins that can be used to extend reveal.js.
 
+## HTW Template
+
+This version of reveal.js contains a special theme to fulfil the corporate design of the [University of Applied Sciences Dresden (HTW Dresden)]{http://www.htw-dresden.de}. If you clone this repository, this theme is set as default. You may also manually set this theme by including `css/theme/htw.css`.
+
+Title slides have a different style when annotated with the class `title-slide`.
+
+Additionally this repository contains the plugin `plugin/htw-footer/htw-footer.js`. It provides a custom footer to better resemble the corporate design which automatically scales to the total screen width. The footer plugin only works when used together with the css template. 
+
 ## Online Editor
 
 Presentations are written using HTML or Markdown but there's also an online editor for those of you who prefer a graphical interface. Give it a try at [http://slides.com](http://slides.com?ref=github).
