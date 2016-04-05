@@ -60,13 +60,15 @@ section.has-dark-background {
 }
 
 
-$logoSize: 263px;
 $logoOriginalWidth: 493px;
 $logoOriginalHeight: 86px;
+$logoWidth: 263px;
+$logoHeight: $logoWidth * $logoOriginalHeight / $logoOriginalWidth;
 
 .reveal .slides>section:not(.title-slide) {
     h1,h2,h3,h4,h5,h6 {
         border-bottom: 2px solid $htwColorOrange;
+        min-height: $logoHeight;
         &:after {
             content: '';
             display: block;
@@ -75,8 +77,8 @@ $logoOriginalHeight: 86px;
             border-bottom: none;
             top: -3px;
             right: 0px;
-            width:  $logoSize;
-            height: $logoSize * $logoOriginalHeight / $logoOriginalWidth;
+            width:  $logoWidth;
+            height: $logoHeight;
             background-image:url('/img/htw_logo.png');
             background-size: 100%;
         }
