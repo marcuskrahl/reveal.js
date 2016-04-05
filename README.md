@@ -1,4 +1,4 @@
-# reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.svg?branch=master)](https://travis-ci.org/hakimel/reveal.js)
+# reveal.js with HTW template [![Build Status](https://travis-ci.org/hakimel/reveal.js.svg?branch=master)](https://travis-ci.org/hakimel/reveal.js)
 
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
 
@@ -14,7 +14,7 @@ reveal.js comes with a broad range of features including [nested slides](https:/
 
 ## HTW Template
 
-This version of reveal.js contains a special theme to fulfil the corporate design of the [University of Applied Sciences Dresden (HTW Dresden)]{http://www.htw-dresden.de}. If you clone this repository, this theme is set as default. You may also manually set this theme by including `css/theme/htw.css`.
+This version of reveal.js contains a special theme to fulfil the corporate design of the [University of Applied Sciences Dresden (HTW Dresden)](http://www.htw-dresden.de). If you clone this repository, this theme is set as default. You may also manually set this theme by including `css/theme/htw.css`.
 
 Title slides have a different style when annotated with the class `title-slide`.
 
