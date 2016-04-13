@@ -67,20 +67,22 @@ $logoHeight: $logoWidth * $logoOriginalHeight / $logoOriginalWidth;
 
 .reveal .slides>section:not(.title-slide) {
     h1,h2,h3,h4,h5,h6 {
-        border-bottom: 2px solid $htwColorOrange;
-        min-height: $logoHeight;
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            border: 30px solid white;
-            border-bottom: none;
-            top: -3px;
-            right: 0px;
-            width:  $logoWidth;
-            height: $logoHeight;
-            background-image:url('/img/htw_logo.png');
-            background-size: 100%;
+        &:first-child {
+            border-bottom: 2px solid $htwColorOrange;
+            min-height: $logoHeight;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                border: 30px solid white;
+                border-bottom: none;
+                top: -3px;
+                right: 0px;
+                width:  $logoWidth;
+                height: $logoHeight;
+                background-image:url('/img/htw_logo.png');
+                background-size: 100%;
+            }
         }
     }
 }
